@@ -16,10 +16,11 @@ class Main
         $bookShelf->appendBook(new Book('Cinderella'));
         $bookShelf->appendBook(new Book('Daddy-Long-Legs'));
 
-        $iterator = $bookShelf->iterator();
-        while ($iterator->hasNext()) {
-            $book = $iterator->next();
+        $iterator = $bookShelf->getIterator();
+        while ($iterator->valid()) {
+            $book = $iterator->current();
             echo $book->getName().PHP_EOL;
+            $iterator->next();
         }
     }
 }

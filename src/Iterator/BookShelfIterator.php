@@ -4,7 +4,12 @@ declare(strict_types=1);
 
 namespace Src\Iterator;
 
-class BookShelfIterator implements IteratorInterface
+use Iterator;
+
+/**
+ * @implements Iterator<Book>
+ */
+class BookShelfIterator implements Iterator
 {
     private int $index = 0;
 
@@ -12,16 +17,28 @@ class BookShelfIterator implements IteratorInterface
     {
     }
 
-    public function hasNext(): bool
+    public function rewind(): void
     {
-        return $this->index < $this->bookShelf->getLength();
+        $this->index = 0;
     }
 
-    public function next(): Book
+    public function current(): Book
     {
-        $book = $this->bookShelf->getBookAt($this->index);
-        ++$this->index;
+        return $this->bookShelf->getBookAt($this->index);
+    }
 
-        return $book;
+    public function key(): int
+    {
+        return $this->index;
+    }
+
+    public function next(): void
+    {
+        ++$this->index;
+    }
+
+    public function valid(): bool
+    {
+        return $this->index < $this->bookShelf->getLength();
     }
 }

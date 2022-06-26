@@ -4,7 +4,12 @@ declare(strict_types=1);
 
 namespace Src\Iterator;
 
-class BookShelf implements AggregateInterface
+use IteratorAggregate;
+
+/**
+ * @implements IteratorAggregate<Book>
+ */
+class BookShelf implements IteratorAggregate
 {
     /**
      * @var Book[]
@@ -34,7 +39,7 @@ class BookShelf implements AggregateInterface
     }
 
     // 本だとIteratorInterfaceを返り値に指定している
-    public function iterator(): BookShelfIterator
+    public function getIterator(): BookShelfIterator
     {
         return new BookShelfIterator($this);
     }

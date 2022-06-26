@@ -1,4 +1,6 @@
 <?php
+
+declare(strict_types=1);
 /*
  * This document has been generated with
  * https://mlocati.github.io/php-cs-fixer-configurator/#version:3.8.0|configurator
@@ -19,7 +21,7 @@ return $config
     ])
     ->setFinder(
         PhpCsFixer\Finder::create()
-    ->exclude('vendor')
-    ->in(__DIR__)
+            ->exclude('vendor')
+            ->in(__DIR__)
     )
 ;

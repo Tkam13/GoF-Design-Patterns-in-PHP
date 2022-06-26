@@ -15,6 +15,7 @@ class Main
         $bookShelf->appendBook(new Book('Bible'));
         $bookShelf->appendBook(new Book('Cinderella'));
         $bookShelf->appendBook(new Book('Daddy-Long-Legs'));
+        $bookShelf->appendBook(new Book('Diary of a Wimpy Kid')); // 練習問題で追加 phpの配列は動的なので問題なく追加できる
 
         $iterator = $bookShelf->getIterator();
         while ($iterator->valid()) {

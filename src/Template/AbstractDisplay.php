@@ -6,11 +6,11 @@ namespace Src\Template;
 
 abstract class AbstractDisplay
 {
-    abstract public function open(): void;
+    abstract protected function open(): void;
 
-    abstract public function print(): void;
+    abstract protected function print(): void;
 
-    abstract public function close(): void;
+    abstract protected function close(): void;
 
     final public function display(): void
     {

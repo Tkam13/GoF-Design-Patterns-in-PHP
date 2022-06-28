@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Template;
+namespace Src\TemplateMethod;
 
 class CharDisplay extends AbstractDisplay
 {

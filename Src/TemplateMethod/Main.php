@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Src\Template;
+namespace Src\TemplateMethod;
 
 require_once '../../vendor/autoload.php';
 

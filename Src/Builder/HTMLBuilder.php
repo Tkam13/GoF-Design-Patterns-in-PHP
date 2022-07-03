@@ -7,7 +7,7 @@ namespace Src\Builder;
 use Exception;
 use SplFileObject;
 
-class HTMLBuilder extends Builder
+class HTMLBuilder implements Builder
 {
     private string $fileName = 'untitled.html';
     private string $stringBuilder = '';

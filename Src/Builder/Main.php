@@ -45,4 +45,4 @@ class Main
     }
 }
 
-Main::run(['html']);
+Main::run(['text']);

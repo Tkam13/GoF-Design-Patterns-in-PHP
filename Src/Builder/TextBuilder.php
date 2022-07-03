@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Src\Builder;
 
-class TextBuilder extends Builder
+class TextBuilder implements Builder
 {
     private string $stringBuilder = '';
 
